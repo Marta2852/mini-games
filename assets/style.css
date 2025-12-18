@@ -1,0 +1,233 @@
+/* =========================
+   COLOR PALETTE (LOCKED)
+   ========================= */
+:root {
+  --jacarta: #3F2A52;
+  --dark-blue-gray: #75619D;
+  --wisteria: #BEAEDB;
+  --bright-gray: #E6EFFF;
+  --black-coffee: #3A2D34;
+
+  --bg-main: var(--bright-gray);
+  --bg-card: #ffffff;
+  --bg-header: var(--jacarta);
+
+  --text-main: var(--black-coffee);
+  --text-light: #ffffff;
+  --text-muted: #6b6270;
+
+  --accent: var(--dark-blue-gray);
+  --accent-soft: var(--wisteria);
+
+  --success: #6fbf9b;
+  --error: #e07a7a;
+}
+
+/* =========================
+   RESET / BASE
+   ========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+/* =========================
+   HEADER / NAVBAR
+   ========================= */
+header {
+  background: var(--bg-header);
+  color: var(--text-light);
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  gap: 12px;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--text-light);
+  padding: 8px 14px;
+  border-radius: 10px;
+}
+
+header a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+header a[style*="font-weight:bold"] {
+  background: var(--dark-blue-gray);
+}
+
+/* =========================
+   MAIN LAYOUT
+   ========================= */
+main {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section,
+.card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================
+   GAME MENU
+   ========================= */
+section h2 {
+  margin-top: 0;
+}
+
+section ol {
+  padding-left: 18px;
+}
+
+section li {
+  margin-bottom: 6px;
+}
+
+/* =========================
+   STATS BAR
+   ========================= */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.stats span {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* =========================
+   PROMPT BOX (SCROLLABLE)
+   ========================= */
+#promptBox {
+  border: 2px solid var(--accent-soft);
+  background: #faf9fd;
+  border-radius: 12px;
+  padding: 12px;
+  height: 220px;
+  overflow-y: auto;
+  line-height: 2;
+  margin-bottom: 12px;
+}
+
+#prompt span {
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-right: 2px;
+}
+
+/* Active word */
+#prompt span.active {
+  outline: 2px solid var(--accent);
+}
+
+/* Correct / wrong */
+#prompt span.correct {
+  background: rgba(111, 191, 155, 0.35);
+}
+
+#prompt span.wrong {
+  background: rgba(224, 122, 122, 0.35);
+}
+
+/* Preview while typing */
+#prompt span.preview-good {
+  outline: 2px solid var(--success);
+}
+
+#prompt span.preview-bad {
+  outline: 2px solid var(--error);
+}
+
+/* =========================
+   INPUT
+   ========================= */
+#input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 2px solid var(--accent-soft);
+  outline: none;
+}
+
+#input:focus {
+  border-color: var(--accent);
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+button {
+  background: var(--accent);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================
+   FORMS
+   ========================= */
+input,
+select {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 2px solid var(--accent-soft);
+}
+
+select:focus,
+input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* =========================
+   LEADERBOARD
+   ========================= */
+#leaderboard ol {
+  padding-left: 18px;
+}
+
+#leaderboard li {
+  margin-bottom: 8px;
+}

@@ -1,12 +1,5 @@
 {
     "easy": [],
     "medium": [],
-    "hard": [
-        {
-            "nickname": "Nex",
-            "time": "00:42",
-            "seconds": 42,
-            "created_at": "2026-01-02T17:51:21+00:00"
-        }
-    ]
+    "hard": []
 }
